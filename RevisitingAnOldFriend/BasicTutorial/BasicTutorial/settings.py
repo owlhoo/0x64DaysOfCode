@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'database_practice.apps.DatabasePracticeConfig',
     'blog.apps.BlogConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
@@ -85,6 +86,14 @@ DATABASES = {
         'PORT': '',
     },
     'blog': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '',
+    },
+    'music': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': '',
         'USER': '',
