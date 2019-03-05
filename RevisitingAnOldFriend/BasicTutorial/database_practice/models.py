@@ -44,3 +44,16 @@ class Membership(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     date_joined = models.DateField()
     invite_reason = models.CharField(max_length=256)
+
+
+class Man(models.Model):
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    surname = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.person.name
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        print("Done saving..", end="hehe\n")
+        self.__str__()
