@@ -1,0 +1,14 @@
+{% if error_message %}
+    <h2 style="font-style:italic;"> {{ error_message  }} </h2>
+{% else %}
+    <ul>
+    {% for choice in question.choice_set.all %}
+        <li>
+            {{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}
+        </li>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+
+{% endif %}
