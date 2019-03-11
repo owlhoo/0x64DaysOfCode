@@ -1,3 +1,7 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
+
 {% if error_message %}
     <h2 style="font-style:italic;"> {{ error_message  }} </h2>
 {% else %}
@@ -9,6 +13,12 @@
     {% endfor %}
     </ul>
 
-    <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+    <br><br>
+
+    <h1>
+        <a href="{% url 'polls:detail' question.id %}">
+            Vote again?
+        </a>
+    </h1>
 
 {% endif %}

@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url("images/318.gif");
+    height: 100%;
+    width: 100%;
+}
+
+li a, h1, li, form {
+    color:whitesmoke;
+    font-size: 40px;
+    text-align: center;
+}
+
+span {
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size: 40px;
+    color: deepskyblue;
+}
+
+ul, p {
+    padding-top: 15%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+span a:hover {
+    color: blue;
+}
+
+.radiobuttons:hover {
+    color:yellow;
+}
+
+a:hover {
+    color:white;
+}
