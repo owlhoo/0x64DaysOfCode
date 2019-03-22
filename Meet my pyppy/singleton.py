@@ -2,6 +2,7 @@
 
 class Singleton:
     number = 0
+    random = 0
 
     def __new__(cls):                               # provides only one instantiation of class
         try:
@@ -17,10 +18,21 @@ class Singleton:
     def __eq__(self, other):
         return other is self
 
+    def class_attr(self):
+        if self.random is not 1:
+            self.random += 1
+        else:
+            pass
+
 
 s = Singleton()
-print(s.__repr__() + f' {s.number}')
+s.class_attr()
+print(s.__repr__() + f' {s.number}, random = {s.random}')
+
 s2 = Singleton()
-print(s.__repr__() + f' {s2.number}')
+s2.class_attr()
+print(s.__repr__() + f' {s2.number}, random = {s2.random}')
+
 s3 = Singleton()
-print(str(s) + f' {s3.number}')
+s3.class_attr()
+print(str(s) + f' {s3.number}, random = {s3.random}')
