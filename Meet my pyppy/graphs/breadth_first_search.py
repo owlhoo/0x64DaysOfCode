@@ -1,5 +1,7 @@
 from collections import deque
 
+# fastest queue operations in python
+
 
 def bfs(graph, root):
     distances = {root: 0}
