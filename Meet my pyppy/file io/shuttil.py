@@ -32,10 +32,10 @@ for entry in os.scandir('/home/goofy/projects/'):
 
 # replacing a text in file
 
-replacement = {'search1': 'replace1',
+replacement = {'babo': 'tata',
                'search2': 'replace2'}
 
-for line in fileinput.input('somefile.txt', inplace=True):
+for line in fileinput.input('proba.txt', inplace=True):
     for search_for in replacement:
         replace_with = replacement[search_for]
         line = line.replace(search_for, replace_with)
