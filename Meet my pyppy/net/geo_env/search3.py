@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env d point mpython3
 
 import socket
 from urllib.parse import quote_plus
