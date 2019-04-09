@@ -17,7 +17,7 @@ def server(interface, port):
             print(f'Pretending to drop a packet from {address}')
             continue
         text = data.decode('ascii')
-        print(f'The client at {address} says {text}')
+        print(f'The client at {address} says: {text}')
         message = f'Your data was {len(data)} byes long'
         sock.sendto(message.encode('ascii'), address)
 
@@ -29,22 +29,22 @@ def client(hostname, port):
     print(f'Client socket name is {sock.getsockname()}')
 
     delay = 0.1  # secs
-    text = 'This is another message'
+    text = input('Enter message:')
     data = text.encode('ascii')
     while True:
         sock.send(data)
         print(f'Waiting up to {delay} seconds for a reply')
         sock.settimeout(delay)
         try:
-            data = sock.recvfrom(MAX_BYTES)
+            data, addr = sock.recvfrom(MAX_BYTES)
+            #
+            # print(f'The server says {data.decode("ascii")}')
         except socket.timeout:
             delay *= 2  # wait even longer for the next request
             if delay > 2.0:
                 raise RuntimeError('I think the server is down')
             else:
                 break  # we are done, looping can be stopped
-
-        print(f'The server says {data.decode("ascii")}')
 
 
 if __name__ == '__main__':
