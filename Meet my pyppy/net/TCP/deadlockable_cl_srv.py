@@ -20,7 +20,7 @@ def server(host, port, bytecount):
             output = data.decode('ascii').upper().encode('ascii')
             sc.sendall(output)
             n += len(data)
-            print(f'\r {n} bytes processed so far', end=' ')
+            print(f' {n} bytes processed so far')
             sys.stdout.flush()
         print()
         sc.close()
@@ -34,12 +34,12 @@ def client(host, port, bytecount):
 
     print(f'Sending {bytecount} bytes of data in chunks of 16 bytes')
     sock.connect((host, port))
-
+    print(f'Connected to server at {sock.getpeername()}')
     sent = 0
     while sent < bytecount:
         sock.sendall(message)
         sent += len(message)
-        print(f'\r {sent} bytes sent', end=' ')
+        print(f'\r {sent} bytes sent', end="")
         sys.stdout.flush()
 
     print()
@@ -55,7 +55,7 @@ def client(host, port, bytecount):
         if not data:
             break
         received += len(data)
-        print(f'\r {received} bytes received', end=' ')
+        print(f'\r {received} bytes received', end="")
 
     print()
     sock.close()
@@ -74,5 +74,3 @@ if __name__ == '__main__':
     args = parser.parse_args()
     func = choices[args.role]
     func(args.host, args.p, args.bytecount)
-
-
