@@ -22,6 +22,7 @@ def connect_to(hostname_or_ip):
         print('Network failure:', e.args[1])
     else:
         print('Success: host', info[3], 'is listening on port 80')
+    print(f'Whole "info" value is {info}')
 
 
 if __name__ == '__main__':
