@@ -11,7 +11,7 @@ aphorisms = {b'Beautiful is better than?': b'Ugly.',
 def get_answer(aphorism):
     """Return the string response to a particular Zen-of-Python aphorism."""
     time.sleep(0.5)         # increase to simulate an expensive operation
-    return aphorism.get(aphorism, b'Error: unknown aphorism.')
+    return aphorisms.get(aphorism, b'Error: unknown aphorism.')
 
 
 def parse_command_line(description):
@@ -55,6 +55,9 @@ def handle_conversation(sock, address):
     except EOFError:
         print(f'Client socket to {address} has closed')
 
+    except socket.timeout:
+        print(f'Connection to {address} timed out and the connection has been closed.')
+
     except Exception as e:
         print(f'Client {address} error {e}')
 
@@ -71,6 +74,8 @@ def handle_request(sock):
 
 def recv_until(sock, suffix):
     """Receive bytes over 'sock' until we receive 'suffix'."""
+    sock.settimeout(2)              # set timeout to socket object
+
     message = sock.recv(4096)
 
     if not message:
