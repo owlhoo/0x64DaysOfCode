@@ -10,6 +10,7 @@ def all_events_forever(poll_object):
 
 def serve(listener):
     sockets = {listener.fileno(): listener}
+
     addresses = {}
     bytes_received = {}
     bytes_to_send = {}
