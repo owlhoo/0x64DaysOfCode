@@ -1,0 +1,75 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Mon Apr 22 16:37:37 2019
+# Process ID: 6824
+# Log file: C:/Users/Aleksandar/Desktop/Arhitekture2/LCD/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Aleksandar/Desktop/Arhitekture2/LCD/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/Aleksandar/Desktop/Arhitekture2/LCD/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin M15 [get_ports {SF_D[3]}]
+endgroup
+startgroup
+set_property package_pin P17 [get_ports {SF_D[2]}]
+endgroup
+set_property package_pin "" [get_ports [list  {SF_D[0]}]]
+startgroup
+set_property package_pin R16 [get_ports {SF_D[1]}]
+endgroup
+startgroup
+set_property package_pin R15 [get_ports {SF_D[0]}]
+endgroup
+startgroup
+set_property package_pin M18 [get_ports clk]
+endgroup
+set_property package_pin "" [get_ports [list  LCD_E]]
+set_property package_pin "" [get_ports [list  clk]]
+startgroup
+set_property package_pin M18 [get_ports LCD_E]
+endgroup
+startgroup
+set_property package_pin L18 [get_ports LCD_RS]
+endgroup
+startgroup
+set_property package_pin L17 [get_ports LCD_RW]
+endgroup
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin D16 [get_ports SF_CE0]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports reset]
+endgroup
+startgroup
+set_property package_pin F12 [get_ports {LED[0]}]
+endgroup
+startgroup
+set_property package_pin E12 [get_ports {LED[1]}]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports {LED[2]}]
+endgroup
+startgroup
+set_property package_pin F11 [get_ports {LED[3]}]
+endgroup
+startgroup
+set_property package_pin C11 [get_ports {LED[4]}]
+endgroup
+startgroup
+set_property package_pin D1 [get_ports {LED[5]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {LED[5]}]
+endgroup
+startgroup
+set_property package_pin E9 [get_ports {LED[6]}]
+endgroup
+startgroup
+set_property package_pin F9 [get_ports {LED[7]}]
+endgroup
+save_constraints

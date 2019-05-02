@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Hamza\Downloads\LCD\lcdtest.ncd
+OUTFILE=C:\Users\Hamza\Downloads\LCD\lcdtest.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\Hamza\Downloads\LCD
+LICENSE=WebPack
+USER_INFO=211015299_0_0_811

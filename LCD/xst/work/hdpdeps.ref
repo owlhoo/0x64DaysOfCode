@@ -1,0 +1,8 @@
+V3 4
+FL C:/Users/Aleksandar/Desktop/Arhitekture2/LCD/lcdtest.vhd 2019/04/22.16:59:03 P.20131013
+FL C:/Users/Hamza/Downloads/LCD/lcdtest.vhd 2019/05/02.19:36:37 P.20131013
+EN work/lcdtest 1556818611 FL C:/Users/Hamza/Downloads/LCD/lcdtest.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/lcdtest/Behavioral 1556818612 \
+      FL C:/Users/Hamza/Downloads/LCD/lcdtest.vhd EN work/lcdtest 1556818611
